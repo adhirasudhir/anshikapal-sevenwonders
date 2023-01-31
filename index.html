@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="summer work">
+  <meta name="keywords" content="HTML, CSS, Javascript, Wikipedia">
+  <meta name="author" content="lewardo">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> WONDER SEVEN </title>
+
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="css/stylesheet.css">
+
+  <script src="js/info.js"></script>
+  <script src="js/index.js"></script>
+</head>
+<body onload="initialise()">
+  <header>
+    <span id="title" onclick="getInfo('home')" style="algerian"> WONDER SEVEN </span>
+    <div class="moreinfo">
+      <span class="link" onclick="getInfo('tm')">Taj Mahal</span>
+      <span class="link" onclick="getInfo('col')">Colosseum</span>
+      <span class="link" onclick="getInfo('mp')">Machu Picchu</span>
+      <span class="link" onclick="getInfo('ctr')">Christ the Redeemer</span>
+      <span class="link" onclick="getInfo('ci')">Chichen Itza</span>
+      <span class="link" onclick="getInfo('pet')">Petra</span>
+      <span class="link" onclick="getInfo('gwc')">Great Wall of China</span>
+	   <a href="my-portfolio/index.html"> About Us </a>
+    </div>
+  </header>
+  <main id="main">
+    <section id="content">
+      <!-- all dynamically changed by JS -->
+      <div id="img"><img alt="the 7 wonders"></div>
+
+      <div class="info">
+        <a id="wikilink"></a>
+        <div id="text"></div>
+        <br>
+        <span id="interesting"></span>
+        <ul id="points"></ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <form action="javascript:void(0)" id="experience" class="info">
+        <label style="border-bottom: 2px solid #333;">feedback!</label>
+        <br><br>
+        <input id="name" type="text" placeholder="name" autocomplete="off">
+        <input id="surname" type="text" placeholder="surname" autocomplete="off">
+        <br>
+        <label for="location">I went to:</label>
+        <select name="location" id="loc">
+          <option value="tm">The Taj Mahal</option>
+          <option value="col">The Colosseum</option>
+          <option value="mp">Machu Picchu</option>
+          <option value="ctr">See Christ the Redeemer</option>
+          <option value="ci">Chichen Itza</option>
+          <option value="pet">Petra</option>
+          <option value="gwc">The Great Wall of China</option>
+        </select>
+        <label for="date">on the</label>
+        <input type="date" name="sate" id="date" value="1970-01-01">
+        <br>
+        <textarea name="experience" id="story" cols="64" rows="8" placeholder="it was..."></textarea>
+        <br>
+        <input id="experiencesubmit" type="submit" value="tell your experience!" onclick="uploadStory()">
+      </form>
+    </section>
+  </main>
+  <footer>
+    <form action="javascript:void(0)" id="mailinglist">
+      <label for="email">join our newsletter!</label>
+      <input id="email" type="email" placeholder="email" autocomplete="off">
+
+      <input id="mailsubmit" type="submit" value="send me stuff!" onclick="addToMailingList()">
+    </form>
+  </footer>
+</body>
+</html>
